@@ -1,34 +1,33 @@
-answer = 5
+import random
 
-print("Please guess a number between 1 and 10: ")
+highest = 10
+answer = random.randint(1, highest)
+print(answer)   #TODO: Remove after testing
+
+print("Please guess a number between 1 and {}: ".format(highest))
 guess = int(input())
 
-if guess == answer:
-    print("Hey, you got it! :)")
-else:
-    if guess < answer:
+while guess != answer:
+    if guess == 0:
+        print("You quit the game.")
+        break
+    elif guess < answer:
         print("Please guess higher: ")
-    else:   # guess must be greater than answer
+    elif guess > answer:   # guess must be greater than answer
         print("Please guess lower: ")
     guess = int(input())
-    if guess == answer:
-        print("Well done! :)")
-    else:
-        print("Sorry, not correct. :(")
 
-# if guess < answer:
-#     print("Please guess higher: ")
-#     guess = int(input())
-#     if guess == answer:
-#         print("Well done, you guessed it!")
-#     else:
-#         print("Sorry :(")
-# elif guess > answer:
-#     print("Please guess lower: ")
-#     guess = int(input())
-#     if guess == answer:
-#         print("Well done, you guessed it!")
-#     else:
-#         print("Sorry :(")
+print("Hey, you got it! :)")
+
+# if guess == answer:
+#     print("Hey, you got it! :)")
 # else:
-#     print("Correct! :)")
+#     if guess < answer:
+#         print("Please guess higher: ")
+#     else:   # guess must be greater than answer
+#         print("Please guess lower: ")
+#     guess = int(input())
+#     if guess == answer:
+#         print("Well done! :)")
+#     else:
+#         print("Sorry, you have not guessed correctly. :(")
