@@ -1,8 +1,6 @@
 choice = "-"
-while True:
-    if choice == "0":
-        break
-    elif choice in "12345":
+while choice != "0":
+    if choice in "12345":
         print("You chose {}".format(choice))
     else:
         print("Please choose your option from the list below: ")
