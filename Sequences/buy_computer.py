@@ -2,7 +2,7 @@ current_choice = "-"
 computer_parts = [] # create an empty list
 
 while current_choice != '0':
-    if current_choice in "12345":
+    if current_choice in "123456":
         print("Adding {}".format(current_choice))
         if current_choice == '1':
             computer_parts.append("computer")
@@ -14,6 +14,8 @@ while current_choice != '0':
             computer_parts.append("mouse")
         elif current_choice == '5':
             computer_parts.append("mouse mat")
+        elif current_choice == '6':
+            computer_parts.append("hdmi cable")
     else:
         print("Please add options from the list below:")
         print("1: computer")
@@ -21,6 +23,7 @@ while current_choice != '0':
         print("3: keyboard")
         print("4: mouse")
         print("5: mouse mat")
+        print("6: hdmi cable")
         print("0: to finish")
 
     current_choice = input()
