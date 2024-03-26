@@ -20,3 +20,21 @@ print(values)
 
 values_list = values.split()
 print(values_list)
+
+# Mini challenge:
+# Use a for loop to produce a list of ints, rather than strings.
+# You can either modify the contents of the 'values_list' list in place,
+# or create a new list of ints.
+
+# Replace the values in place - my solution
+for index in range(len(values_list)):
+    values_list[index] = int(values_list[index])
+
+print(values_list)
+
+# Creating a new list - example
+integer_values = []
+for value in values_list:
+    integer_values.append(int(value))
+
+print(integer_values)
