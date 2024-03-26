@@ -10,11 +10,8 @@ menu = [
 ]
 
 for meal in menu:
-    for item in meal:
-        if item != "spam":
-            print(item, end=", ")
-
-    print()
+    items = ", ".join((item for item in meal if item != "spam"))
+    print(items)
 
 # for meal in menu:
 #     for index in range(len(meal) - 1, - 1, - 1):
