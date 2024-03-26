@@ -9,3 +9,12 @@ print(len(albums))
 
 for album, (name, artist, year) in enumerate(albums):
     print("Album: {}, Artist: {}, Year: {}".format(name, artist, year))
+
+# Instructors solutions:
+#
+# for name, artist, year in albums:
+#     print("Album: {}, Artist: {}, Year: {}".format(name, artist, year))
+#
+# for album in albums:
+#     name, artist, year = album
+#     print("Album: {}, Artist: {}, Year: {}".format(name, artist, year))
