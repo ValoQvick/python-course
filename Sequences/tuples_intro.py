@@ -7,5 +7,5 @@ albums = [("Welcome to my Nightmare", "Alice Cooper", 1975),
 
 print(len(albums))
 
-for album in albums:
+for album, (name, artist, year) in enumerate(albums):
     print("Album: {}, Artist: {}, Year: {}".format(name, artist, year))
