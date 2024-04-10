@@ -9,7 +9,7 @@ def is_palindrome(string):
     return string[::-1] == string
 
 
-word = input("Please enter a word to check: ")
+word = input("Please enter a word to check: ").casefold()
 if is_palindrome(word):
     print("'{}' is a palindrome".format(word))
 else:
